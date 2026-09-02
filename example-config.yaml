@@ -1,0 +1,27 @@
+commit:
+  tags:
+   - software-controlled
+   - AI-agent-controlled
+  actions:
+    - fix
+    - new-feat
+    - style
+    - test
+    - restructure
+  scopes:
+    - ui
+    - api
+    - config
+    - db
+  template: |
+    [{{ tag }}] ({{ action }}: {{ scope }}) {{ message }}
+
+    {{ detail }}
+
+remote:
+  auto_push: true
+  auto_pull: false
+
+safety:
+  create_backup: true
+  backuo_prefix: "backup/"
