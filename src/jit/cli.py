@@ -2,9 +2,9 @@
 
 import click
 
-from commands.status import status
-from commands.commit import commit
-from commands.ignore import ignore
+from .commands.status import status
+from .commands.commit import commit
+from .commands.ignore import ignore
 
 @click.group()
 def cli():

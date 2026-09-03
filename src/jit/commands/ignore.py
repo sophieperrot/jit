@@ -4,24 +4,25 @@ import click
 
 @click.command(help="file(s)/folder(s) to be ignored in jit status (when showing changes to commit)")
 @click.argument("filepaths", help="path to file(s)/folder(s) to be ignored")
-@click.argument("--undo", "-u", help="undo ignoring a file, will remove it from all ignored unless specified tag(s) to be unignored from")
+@click.option("--undo", "-u", help="undo ignoring a file, will remove it from all ignored unless specified tag(s) to be unignored from")
 @click.option("--tags", "-t", help="tag the file(s)/folder(s) to be ignored to one or more categories")
 def ignore(filepaths, undo, tags):
     click.echo("jit ignore: to be implemented")
+    click.echo(tags)
 
-    IGNORE_FILEPATH = "jitignore.yaml"
-    if undo is not None:
-        undo_ignore(IGNORE_FILEPATH, filepaths, tags)
-    else:
-        add_ignore(IGNORE_FILEPATH, filepaths, tags)
+#     IGNORE_FILEPATH = "jitignore.yaml"
+#     if undo is not None:
+#         undo_ignore(IGNORE_FILEPATH, filepaths, tags)
+#     else:
+#         add_ignore(IGNORE_FILEPATH, filepaths, tags)
 
-def undo_ignore(ignore_filepath, filepaths, tags):
-    pass
+# def undo_ignore(ignore_filepath, filepaths, tags):
+#     pass
 
-def add_ignore(ignore_filepath, filepaths, tags):
-    if tags is not None:
-        pass
-    pass
+# def add_ignore(ignore_filepath, filepaths, tags):
+#     if tags is not None:
+#         pass
+#     pass
 
 
     # with open(IGNORE_FILEPATH) as ignore_file:
