@@ -2,6 +2,14 @@
 
 import click
 
-@click.command()
-def main():
-    click.echo("hello world")
+from commands.status import status
+from commands.commit import commit
+from commands.ignore import ignore
+
+@click.group()
+def cli():
+    click.echo("welcome to jit!")
+
+cli.add_command(status)
+cli.add_command(commit)
+cli.add_command(ignore)
